@@ -7,3 +7,4 @@ __Overmind__ is a quick project start-up template which uses [vagrant](http://ww
 2. [Docker](http://www.docker.io)
 3. [Docker-registry](https://registry.hub.docker.com/_/registry/)
 4. [Shipyard](http://shipyard-project.com/)
+5. [gogs](http://gogs.io/)

@@ -23,18 +23,36 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # `vagrant box outdated`. This is not recommended.
   config.vm.box_check_update = false
 
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  config.vm.synced_folder "./utils", "/home/vagrant/utils"
+
+  config.vm.synced_folder "./share", "/home/vagrant/share"
+
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+
+  config.vm.provision "shell", path: "provision.sh"
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
 
-  #For shipyard:
+  #For docker registry
+  config.vm.network "forwarded_port", guest: 5000, host: 5000
+
+  #For shipyard
   config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   #For jenkins
   config.vm.network "forwarded_port", guest: 9090, host: 9090
 
-  #For docker registry
-  config.vm.network "forwarded_port", guest: 5000, host: 5000
+  #For gogs ssh
+  config.vm.network "forwarded_port", guest: 10022, host: 10022
+
+  #For gogs web
+  config.vm.network "forwarded_port", guest: 10080, host: 10080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -48,15 +66,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
   config.ssh.forward_agent = true
-
-  # Share an additional folder to the guest VM. The first argument is
-  # the path on the host to the actual folder. The second argument is
-  # the path on the guest to mount the folder. And the optional third
-  # argument is a set of non-required options.
-  config.vm.synced_folder "./drone", "/home/vagrant/drone"
-
-  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-
-  config.vm.provision "shell", path: "provision.sh"
 
 end
