@@ -51,10 +51,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #For jenkins
   config.vm.network "forwarded_port", guest: 9090, host: 9090
 
-  #For gogs ssh
-  config.vm.network "forwarded_port", guest: 10022, host: 10022
-
-  
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
