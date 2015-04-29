@@ -39,6 +39,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
 
+  #For gogs web
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+
   #For docker registry
   config.vm.network "forwarded_port", guest: 5000, host: 5000
 
@@ -51,9 +54,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #For gogs ssh
   config.vm.network "forwarded_port", guest: 10022, host: 10022
 
-  #For gogs web
-  config.vm.network "forwarded_port", guest: 10080, host: 10080
-
+  
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
