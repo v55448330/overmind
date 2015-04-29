@@ -13,7 +13,7 @@ done
 sudo usermod -aG docker vagrant
 
 #Install services
+sh -c /home/vagrant/utils/jenkins/setup.sh
 sh -c /home/vagrant/utils/gogs/setup.sh
 sh -c /home/vagrant/utils/registry/setup.sh
 sh -c /home/vagrant/utils/shipyard/setup.sh
-sh -c /home/vagrant/utils/jenkins/setup.sh
