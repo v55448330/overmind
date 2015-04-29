@@ -8,3 +8,4 @@ __Overmind__ is a quick project start-up template which uses [vagrant](http://ww
 3. [Docker-registry](https://registry.hub.docker.com/_/registry/): Containerized docker registry.
 4. [Shipyard](http://shipyard-project.com/): Composable Docker Management.
 5. [gogs](http://gogs.io/): A self-hosted Git service written in Go.
+6. [TaskBoard](https://github.com/kiswa/TaskBoard): A Kanban-inspired app for keeping track of things that need to get done.

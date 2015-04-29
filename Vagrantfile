@@ -42,7 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #For gogs web
   config.vm.network "forwarded_port", guest: 3000, host: 3000
 
-  #For task board web
+  #For TaskBoard web
   config.vm.network "forwarded_port", guest: 4000, host: 4000
 
   #For docker registry
