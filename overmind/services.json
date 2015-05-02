@@ -1,0 +1,6 @@
+{
+  "gogs": "3000",
+  "jenkins": "9090",
+  "shipyard": "8080",
+  "taskboard": "4000"
+}
