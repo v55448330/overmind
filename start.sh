@@ -16,7 +16,7 @@ if [ "$?" -eq 0 ]; then
 		if [ "$?" -eq 0 ]; then
 			npm install && bower install
 			if [ "$?" -eq 0 ]; then
-				gulp build && node proxy_server.js
+				gulp build && node overmind.js
 			else
 				echo "Launch overmind UI failed."
 				exit 4

@@ -1,7 +1,24 @@
+#!/usr/bin/env node
 var express = require('express');
-var ip = require('ips')().local;
+var os = require('os');
 var app = express();
 var ports = require('./services.json');
+var ip = function (){
+  var deviceMap={
+    'darwin':'en0',
+    'linux':'eth0'
+  };
+  var device = eval('deviceMap.'+os.platform());
+  var infos = eval('os.networkInterfaces().'+device);
+  var ip;
+  infos.forEach(function(device){
+      if (device.family === 'IPv4'){
+        ip = device.address;
+        return;
+      }
+  });
+  return ip
+}();
 
 app.use(express.static(__dirname + '/dist'));
 app.get('/', function (req, res) {
@@ -31,4 +48,4 @@ app.get('/:service', function (req, res) {
 });
 
 app.listen(8000);
-console.log('Overmind is started at http://' + ip + ':8000/');
+console.log('Overmind is running on http://' + ip + ':8000/');
