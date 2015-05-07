@@ -21,19 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
-  config.vm.box_check_update = false
-
-  # Share an additional folder to the guest VM. The first argument is
-  # the path on the host to the actual folder. The second argument is
-  # the path on the guest to mount the folder. And the optional third
-  # argument is a set of non-required options.
-  config.vm.synced_folder "./utils", "/home/vagrant/utils"
-
-  config.vm.synced_folder "./share", "/home/vagrant/share"
-
-  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-
-  config.vm.provision "shell", path: "provision.sh"
+  config.vm.box_check_update = true
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -66,5 +54,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
   config.ssh.forward_agent = true
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  config.vm.synced_folder "utils", "/home/vagrant/utils"
+
+  config.vm.synced_folder "share", "/home/vagrant/share"
+
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+
+  config.vm.provision "shell", path: "provision.sh"
+
 
 end
