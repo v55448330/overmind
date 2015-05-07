@@ -1,11 +1,11 @@
 #!/bin/sh
 vagrant version
 if [ "$?" -eq 0 ]; then
-	vagrant up
+	vagrant up && vagrant provision
 	until [ "$?" -eq 0 ]
 	do
 		echo "Run vagrant up is failed. Retry..."
-		vagrant up
+		vagrant up && vagrant provision
 	done
 
 	cd overmind
