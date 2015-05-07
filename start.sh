@@ -1,5 +1,5 @@
 #!/bin/sh
-which vagrant
+vagrant version
 if [ "$?" -eq 0 ]; then
 	vagrant up
 	until [ "$?" -eq 0 ]

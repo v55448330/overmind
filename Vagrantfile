@@ -36,8 +36,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #For docker registry
   config.vm.network "forwarded_port", guest: 5000, host: 5000
 
-  #For shipyard
-  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  #For dockerboard
+  config.vm.network "forwarded_port", guest: 8001, host: 8001
 
   #For jenkins
   config.vm.network "forwarded_port", guest: 9090, host: 9090
