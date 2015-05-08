@@ -1,12 +1,25 @@
 #!/bin/sh
-docker --version | grep 1.6.0
+docker --version | grep "Docker version"
 if [ "$?" -eq 0 ]; then
-	mkdir -p /var/gogs
-	docker run --name=gogs -d -p 3000:3000 -v /var/gogs:/data codeskyblue/docker-gogs
-	until [ "$?" -eq 0 ]
-	do
+	if [ "$(docker ps -a |grep gogs)" ]; then
+		docker restart gogs
+	else
+		docker pull codeskyblue/docker-gogs
+		until [ "$?" -eq 0 ]
+		do
+			docker pull codeskyblue/docker-gogs
+		done
 		docker run --name=gogs -d -p 3000:3000 -v /var/gogs:/data codeskyblue/docker-gogs
-	done
+	fi
+
+	if [ "$?" -eq 0 ]; then
+		echo "Gogs is started success."
+		exit 0
+	else
+		echo "Gogs is started failed."
+		exit 2
+	fi
+
 else
 	exit 1
 fi

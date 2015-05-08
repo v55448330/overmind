@@ -1,8 +1,8 @@
 #!/bin/sh
-docker --version | grep 1.6.0
+docker --version | grep "Docker version"
 if [ "$?" -eq 0 ]; then
 	if [ "$(docker ps -a |grep dockerboard)" ]; then
-		docker start dockerboard
+		docker restart dockerboard
 	else
 		docker pull dockerboard/dockerboard
 		until [ "$?" -eq 0 ]

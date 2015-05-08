@@ -5,12 +5,17 @@ apt-get update -y
 apt-get upgrade -y
 
 #Install docker
-wget -qO- https://get.docker.com/ |sh
-until [ "$?" -eq 0 ]
-do
+docker --version | grep Docker
+if [ "$?" -eq 0 ]; then
+	echo "Docker has been installed."
+else
 	wget -qO- https://get.docker.com/ |sh
-done
-sudo usermod -aG docker vagrant
+	until [ "$?" -eq 0 ]
+	do
+		wget -qO- https://get.docker.com/ |sh
+	done
+	sudo usermod -aG docker vagrant
+fi
 
 #Install services
 sh -c /home/vagrant/utils/jenkins/setup.sh

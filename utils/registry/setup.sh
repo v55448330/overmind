@@ -1,9 +1,11 @@
 #!/bin/sh
-docker --version | grep 1.6.0
+docker --version | grep "Docker version"
 if [ "$?" -eq 0 ]; then
 	if [ "$(docker ps -a |grep registry)" ]; then
-		docker start registry
+		echo "Restart docker registry."
+		docker restart registry
 	else
+		echo "Start docker registry..."
 		docker pull registry
 		until [ "$?" -eq 0 ]
 		do
