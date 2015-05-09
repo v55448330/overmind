@@ -28,7 +28,7 @@ git clone https://github.com/wizardbyron/overmind.git
 cd overmind
 ./start.sh
 ```
-Then you can see a pormpt like:
+Then you can see a message like:
 
 ```
 Overmind is running on http://192.168.0.2:8000/
@@ -36,7 +36,7 @@ Overmind is running on http://192.168.0.2:8000/
 
 Open the URL in your browser. Then you can see the overmind homepage.
 
-Engjoy it!
+Enjoy it!
 
 License
 ----------
