@@ -5,7 +5,7 @@
     url: '/ip',
     success: function (ip) {
       $('#title').text('Overmind is runing on http://' + ip + ':8000/');
-      $('#jenkins_link').attr('href', 'http://' + ip + ':9090/');
+      $('#jenkins_link').attr('href', 'http://' + ip + ':8080/');
       $('#gogs_link').attr('href', 'http://' + ip + ':3000/');
       $('#dockerboard_link').attr('href', 'http://' + ip + ':8001/');
       $('#taskboard_link').attr('href', 'http://' + ip + ':4000/');

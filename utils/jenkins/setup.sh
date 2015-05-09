@@ -6,7 +6,6 @@ apt-get update -y
 apt-get -y install jenkins
 
 #Initialize Jenkins by new settings
-cp /home/vagrant/utils/jenkins/jenkins_cfg /etc/default/jenkins
 service jenkins start
 
 WAITTING_TIME=0

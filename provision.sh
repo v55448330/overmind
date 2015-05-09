@@ -18,7 +18,7 @@ else
 fi
 
 #Install services
-sh -c /home/vagrant/utils/jenkins/setup.sh
+sh -c /home/vagrant/utils/jenkins/setup_docker.sh
 sh -c /home/vagrant/utils/gogs/setup.sh
 sh -c /home/vagrant/utils/registry/setup.sh
 sh -c /home/vagrant/utils/dockerboard/setup.sh
