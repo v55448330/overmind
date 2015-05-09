@@ -1,7 +1,7 @@
 #!/bin/sh
 docker --version | grep "Docker version"
 if [ "$?" -eq 0 ]; then
-	if [ "$(docker ps -a |grep registry)" ]; then
+	if [ "$(docker ps -a |grep taskboard)" ]; then
 		docker restart taskboard
 	else
 		docker pull mirweb/taskboard
