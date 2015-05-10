@@ -2,7 +2,6 @@
 var express = require('express');
 var os = require('os');
 var app = express();
-var ports = require('./services.json');
 var ip = function (){
   var deviceMap={
     'darwin':'en0',
@@ -30,13 +29,6 @@ app.get('/ip', function (req, res) {
   res.header('Access-Control-Allow-Methods', 'GET');
   res.send(ip);
 });
-
-app.get('/services', function (req, res) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET');
-  res.json(ports);
-});
-
 
 app.get('/:service', function (req, res) {
   try {
