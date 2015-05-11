@@ -1,7 +1,0 @@
-{
-  "name": "overmind",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "~3.3.1"
-  }
-}
