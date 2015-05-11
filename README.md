@@ -16,25 +16,23 @@ Requirements
 
 [Vagrant](https://www.vagrantup.com/): Create and configure lightweight, reproducible, and portable development environments
 
-[Node.js](https://nodejs.org/): Node.js® is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
-
-
 Quick Start
 ----------
-Clone this 	repository and run `start.sh`:
-
+1. Clone this repository and run `vagrant up`:
 ```
 git clone https://github.com/wizardbyron/overmind.git
 cd overmind
-./start.sh
+vagrant up
 ```
-Then you can see a message like:
+2. Access each service by different port:
 
-```
-Overmind is running on http://192.168.0.2:8000/
-```
-
-Open the URL in your browser. Then you can see the overmind homepage.
+| Service         | Port |
+| --------------- |:----:|
+| Gogs            | 3000 |
+| TaskBorad       | 4000 |
+| Docker Registry | 5000 |
+| Dockerboard     | 8001 |
+| Jenkins         | 8080 |
 
 Enjoy it!
 
