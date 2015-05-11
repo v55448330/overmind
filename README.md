@@ -18,13 +18,15 @@ Requirements
 
 Quick Start
 ----------
-1. Clone this repository and run `vagrant up`:
+1.Clone this repository and run `vagrant up`:
+
 ```
 git clone https://github.com/wizardbyron/overmind.git
 cd overmind
 vagrant up
 ```
-2. Access each service by different port:
+
+2.Access each service by port:
 
 | Service         | Port |
 | --------------- |:----:|
@@ -34,7 +36,6 @@ vagrant up
 | Dockerboard     | 8001 |
 | Jenkins         | 8080 |
 
-Enjoy it!
 
 License
 ----------
