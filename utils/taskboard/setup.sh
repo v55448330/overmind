@@ -1,17 +1,13 @@
 #!/bin/sh
 docker --version | grep "Docker version"
 if [ "$?" -eq 0 ]; then
-	if [ "$(docker ps -a |grep taskboard)" ]; then
-		docker restart taskboard
-	else
+	docker pull mirweb/taskboard
+	until [ "$?" -eq 0 ]
+	do
 		docker pull mirweb/taskboard
-		until [ "$?" -eq 0 ]
-		do
-			docker pull mirweb/taskboard
-		done
-		docker run --name taskboard -d -p 4000:80 mirweb/taskboard
-	fi
+	done
 
+	docker run --name taskboard -d --restart=always -p 4000:80 mirweb/taskboard
 	if [ "$?" -eq 0 ]; then
 		echo "TaskBoard is started success."
 		exit 0
