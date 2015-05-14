@@ -40,8 +40,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   #For Gitlab
-  config.vm.network "forwarded_port", guest: 10022, host: 10022
-
   config.vm.network "forwarded_port", guest: 10080, host: 10080
 
 
@@ -63,7 +61,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
 
-  # config.vm.synced_folder "share", "/home/vagrant/share"
+  config.vm.synced_folder "share", "/home/vagrant/share"
 
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 

@@ -37,7 +37,6 @@ gitlab:
     - postgresql:postgresql
   ports:
     - "10080:80"
-    - "10022:22"
   environment:
     - TZ=Asia/Kolkata
     - SMTP_ENABLED=false
