@@ -27,9 +27,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
 
-  #For gogs web
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
-
   #For TaskBoard web
   config.vm.network "forwarded_port", guest: 4000, host: 4000
 
@@ -41,6 +38,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   #For jenkins
   config.vm.network "forwarded_port", guest: 8080, host: 8080
+
+  #For Gitlab
+  config.vm.network "forwarded_port", guest: 10022, host: 10022
+
+  config.vm.network "forwarded_port", guest: 10080, host: 10080
+
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
