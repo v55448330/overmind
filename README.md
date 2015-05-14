@@ -23,7 +23,7 @@ vagrant up
 
 ```
 git clone https://github.com/wizardbyron/overmind.git
-cd overmind
+cd overmind/share
 docker-compose up -d
 ```
 
