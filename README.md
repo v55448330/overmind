@@ -25,7 +25,6 @@ vagrant up
 git clone https://github.com/wizardbyron/overmind.git
 cd overmind
 docker-compose up -d
-
 ```
 
 3.Access each service by port:
