@@ -9,13 +9,9 @@ __Overmind__ is a integrated centralized continuous delivery server template whi
 4. [Docker-registry](https://registry.hub.docker.com/_/registry/): Containerized docker registry.
 5. [Dockerboard](https://registry.hub.docker.com/u/dockerboard/dockerboard/): Simple dashboards, visualizations, managements for your dockers.
 
-Requirements
-----------
-[Vagrant](https://www.vagrantup.com/): Create and configure lightweight, reproducible, and portable development environments.
-
 Quick Start
 ----------
-1.Clone this repository and run `vagrant up`:
+1.[Vagrant](https://www.vagrantup.com/):
 
 ```
 git clone https://github.com/wizardbyron/overmind.git
@@ -23,7 +19,16 @@ cd overmind
 vagrant up
 ```
 
-2.Access each service by port:
+2.[docker-compose](http://docs.docker.com/compose/):
+
+```
+git clone https://github.com/wizardbyron/overmind.git
+cd overmind
+docker-compose up -d
+
+```
+
+3.Access each service by port:
 
 | Service         | Port |
 | --------------- |:----:|
