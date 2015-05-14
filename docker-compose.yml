@@ -1,0 +1,30 @@
+registry:
+  image: registry
+  ports:
+    - "5000:5000"
+
+jenkins:
+  image: jenkins
+  ports:
+    - "8080:8080"
+  volumes:
+    - "/var/jenkins"
+
+taskboard:
+  image: mirweb/taskboard
+  ports:
+    - "4000:80"
+
+gogs:
+  image: codeskyblue/docker-gogs
+  ports:
+    - "3000:3000"
+  volumes:
+    - "/var/gogs:/data"
+
+dockerboard:
+  image: dockerboard/dockerboard
+  ports:
+    - "8001:8001"
+  volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"

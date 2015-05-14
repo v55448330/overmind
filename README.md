@@ -1,9 +1,7 @@
 Overmind
 ===========
 
-__Overmind__ is a integrated centralized continuous delivery server template for __containerized continous delivery__ which running in **vagrant** VM.
-
-__Overmind__ contains some essential common useful tools and services to help a scrum team start up quickly, most of them are running as a docker container:
+__Overmind__ is a integrated centralized continuous delivery server template which contains some essential common useful tools and services to help a scrum team start up quickly. They are started up by [docker-compose](http://docs.docker.com/compose/):
 
 1. [TaskBoard](https://github.com/kiswa/TaskBoard): A Kanban-inspired app for keeping track of things that need to get done.
 2. [Jenkins](https://jenkins-ci.org/): An extensible open source continuous integration server.
@@ -13,8 +11,7 @@ __Overmind__ contains some essential common useful tools and services to help a 
 
 Requirements
 ----------
-
-[Vagrant](https://www.vagrantup.com/): Create and configure lightweight, reproducible, and portable development environments
+[Vagrant](https://www.vagrantup.com/): Create and configure lightweight, reproducible, and portable development environments.
 
 Quick Start
 ----------

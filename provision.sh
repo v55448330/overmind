@@ -3,7 +3,7 @@ locale-gen
 sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y python-pip
+apt-get install -y python-pip git
 
 #Install docker
 docker --version | grep Docker
@@ -20,12 +20,7 @@ fi
 
 sudo pip install -U docker-compose
 
-cd /home/vagrant/utils/
-docker-compose up -d
 
-#Install services
-# sh -c /home/vagrant/utils/jenkins/setup_docker.sh
-# sh -c /home/vagrant/utils/gogs/setup.sh
-# sh -c /home/vagrant/utils/registry/setup.sh
-# sh -c /home/vagrant/utils/dockerboard/setup.sh
-# sh -c /home/vagrant/utils/taskboard/setup.sh
+git clone https://github.com/wizardbyron/overmind.git
+cd overmind
+docker-compose up -d
