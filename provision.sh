@@ -20,6 +20,6 @@ fi
 
 sudo pip install -U docker-compose
 
-cd /home/vagrant/share
+cd /home/vagrant/docker
 sudo su - vagrant
 docker-compose up -d

@@ -62,6 +62,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
 
   config.vm.synced_folder "share", "/home/vagrant/share"
+  
+  config.vm.synced_folder "share", "/home/vagrant/docker"
 
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
