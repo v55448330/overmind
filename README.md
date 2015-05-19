@@ -3,11 +3,14 @@ Overmind
 
 __Overmind__ is a integrated centralized continuous delivery server template which contains some essential common useful tools and services to help a scrum team start up quickly. They are started up by [docker-compose](http://docs.docker.com/compose/):
 
-1. [TaskBoard](https://github.com/kiswa/TaskBoard): A Kanban-inspired app for keeping track of things that need to get done.
-2. [Jenkins](https://jenkins-ci.org/): An extensible open source continuous integration server.
-3. [Gogs](http://gogs.io/): A self-hosted Git service written in Go.
-4. [Docker-registry](https://registry.hub.docker.com/_/registry/): Containerized docker registry.
-5. [Dockerboard](https://registry.hub.docker.com/u/dockerboard/dockerboard/): Simple dashboards, visualizations, managements for your dockers.
+Images in Overmind:
+
+1. [TaskBoard](https://registry.hub.docker.com/u/mirweb/taskboard/)
+2. [Jenkins](https://registry.hub.docker.com/_/jenkins/)
+3. [Gitlab](https://registry.hub.docker.com/u/sameersbn/gitlab/)
+4. [Docker-registry](https://registry.hub.docker.com/_/registry/)
+5. [Dockerboard](https://registry.hub.docker.com/u/dockerboard/dockerboard/)
+
 
 Quick Start
 ----------
@@ -29,14 +32,13 @@ docker-compose up -d
 
 3.Access each service by port:
 
-| Service         | Port |
-| --------------- |:----:|
-| Gogs            | 3000 |
-| TaskBorad       | 4000 |
-| Docker Registry | 5000 |
-| Dockerboard     | 8001 |
-| Jenkins         | 8080 |
-
+| Service         |  Port  |
+| --------------- |:------:|
+| TaskBorad       | 4000   |
+| Docker Registry | 5000   |
+| Dockerboard     | 8001   |
+| Jenkins         | 8080   |
+| Gitlab          | 10080  |
 
 License
 ----------
