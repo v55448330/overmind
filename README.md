@@ -18,7 +18,7 @@ Quick Start
 
 ```
 git clone https://github.com/wizardbyron/overmind.git
-cd overmind
+cd overmind/vagrant
 vagrant up
 ```
 
@@ -26,7 +26,7 @@ vagrant up
 
 ```
 git clone https://github.com/wizardbyron/overmind.git
-cd overmind/share
+cd overmind
 docker-compose up -d
 ```
 

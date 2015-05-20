@@ -20,6 +20,6 @@ fi
 
 sudo pip install -U docker-compose
 
-cd /home/vagrant/docker
-sudo su - vagrant
+git clone https://github.com/wizardbyron/overmind.git
+cd overmind
 docker-compose up -d
