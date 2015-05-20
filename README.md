@@ -14,23 +14,24 @@ Images in Overmind:
 
 Quick Start
 ----------
-1.[Vagrant](https://www.vagrantup.com/):
 
-```
-git clone https://github.com/wizardbyron/overmind.git
-cd overmind/vagrant
-vagrant up
-```
+1. [docker-compose](http://docs.docker.com/compose/):
 
-2.[docker-compose](http://docs.docker.com/compose/):
+	```
+	git clone https://github.com/wizardbyron/overmind.git
+	cd overmind
+	docker-compose up -d
+	```
 
-```
-git clone https://github.com/wizardbyron/overmind.git
-cd overmind
-docker-compose up -d
-```
+2. [Vagrant](https://www.vagrantup.com/): install docker and docker-compose then clone and create and start containers.
 
-3.Access each service by port:
+	```
+	git clone https://github.com/wizardbyron/overmind.git
+	cd overmind/vagrant
+	vagrant up
+	```
+
+3. Access service by : `http://<your-ip>:<port>`
 
 | Service         |  Port  |
 | --------------- |:------:|
