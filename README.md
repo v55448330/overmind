@@ -33,13 +33,13 @@ Quick Start
 
 3. Access service by : `http://<your-ip>:<port>`
 
-| Service         |  Port  |
-| --------------- |:------:|
-| TaskBorad       | 4000   |
-| Docker Registry | 5000   |
-| Dockerboard     | 8001   |
-| Jenkins         | 8080   |
-| Gitlab          | 10080  |
+| Service         |  Port  |                Comments                  |
+| --------------- |--------|------------------------------------------|
+| TaskBorad       | 4000   ||
+| Docker Registry | 5000   ||
+| Dockerboard     | 8001   ||
+| Jenkins         | 8080   ||
+| Gitlab          | 10080  | default username/password: root/5iveL!fe |
 
 License
 ----------
