@@ -1,13 +1,13 @@
 Overmind
 ===========
 
-__Overmind__ is a integrated centralized continuous delivery server template which contains some essential common useful tools and services to help a scrum team start up quickly. They are started up by [docker-compose](http://docs.docker.com/compose/):
+__Overmind__ is a integrated centralized continuous delivery server vagrant file which contains some essential common useful tools and services to help a scrum team start up quickly.
 
 Images in Overmind:
 
 1. [TaskBoard](https://registry.hub.docker.com/u/mirweb/taskboard/)
 2. [Jenkins](https://registry.hub.docker.com/_/jenkins/)
-3. [Gitlab](https://registry.hub.docker.com/u/sameersbn/gitlab/)
+3. [Gogs](https://registry.hub.docker.com/u/codeskyblue/docker-gogs/)
 4. [Docker-registry](https://registry.hub.docker.com/_/registry/)
 5. [Dockerboard](https://registry.hub.docker.com/u/dockerboard/dockerboard/)
 
@@ -15,16 +15,9 @@ Images in Overmind:
 Quick Start
 ----------
 
-1. [docker-compose](http://docs.docker.com/compose/):
+1. Install [Vagrant](https://www.vagrantup.com/).
 
-	```
-	git clone https://github.com/wizardbyron/overmind.git
-	cd overmind
-	docker-compose up -d
-	```
-
-2. [Vagrant](https://www.vagrantup.com/): install docker and docker-compose then clone and create and start containers.
-
+2. Clone this repository and vagrant up
 	```
 	git clone https://github.com/wizardbyron/overmind.git
 	cd overmind/vagrant
@@ -33,13 +26,14 @@ Quick Start
 
 3. Access service by : `http://<your-ip>:<port>`
 
-| Service         |  Port  |                Comments                  |
-| --------------- |--------|------------------------------------------|
-| TaskBorad       | 4000   ||
-| Docker Registry | 5000   ||
-| Dockerboard     | 8001   ||
-| Jenkins         | 8080   ||
-| Gitlab          | 10080  | default username/password: root/5iveL!fe |
+| Service         | Port |
+| --------------- |------|
+| TaskBoard       | 2000 |
+| Gogs            | 3000 |
+| Docker Registry | 5000 |
+| Dockerboard     | 8001 |
+| Jenkins         | 8080 |
+
 
 License
 ----------
