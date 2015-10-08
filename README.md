@@ -9,7 +9,8 @@ Images in Overmind:
 2. [Jenkins](https://registry.hub.docker.com/_/jenkins/)
 3. [Gogs](https://registry.hub.docker.com/u/codeskyblue/docker-gogs/)
 4. [Docker-registry](https://registry.hub.docker.com/_/registry/)
-5. [Dockerboard](https://registry.hub.docker.com/u/dockerboard/dockerboard/)
+5. [Docker-registry-ui](https://hub.docker.com/r/atcol/docker-registry-ui/)
+6. [Dockerboard](https://registry.hub.docker.com/u/dockerboard/dockerboard/)
 
 
 Quick Start
@@ -26,13 +27,14 @@ Quick Start
 
 3. Access service by : `http://<your-ip>:<port>`
 
-| Service         | Port |
-| --------------- |------|
-| TaskBoard       | 2000 |
-| Gogs            | 3000 |
-| Docker Registry | 5000 |
-| Dockerboard     | 8001 |
-| Jenkins         | 8080 |
+| Service            | Port |
+| -------------------|------|
+| TaskBoard          | 2000 |
+| Gogs               | 3000 |
+| Docker Registry    | 5000 |
+| Docker Registry UI | 5050 |
+| Dockerboard        | 8001 |
+| Jenkins            | 8080 |
 
 
 License
