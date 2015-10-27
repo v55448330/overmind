@@ -23,23 +23,23 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     docker.run "gogs",
         image: "codeskyblue/docker-gogs:latest",
-        args: "--restart=always -p 3000:3000 3022:22 -v /var/gogs:/data"
+        args: "--restart=always -p 4000:3000 -p 3022:22 -v /var/gogs:/data"
 
     docker.run "registry",
         image: "registry:latest",
         args: "--restart=always -p 5000:5000"
 
     docker.run "registry-ui",
-        image: "atcol/docker-registry-ui",
+        image: "atcol/docker-registry-ui:latest",
         args: "--restart=always -p 5050:8080"
 
     docker.run "jenkins",
         image: "jenkins:latest",
         args: "--restart=always -p 8080:8080 -p 50000:50000 -v /var/jenkins:/var/jenkins"
 
-    docker.run "dockerboard",
-        image: "dockerboard/dockerboard:latest",
-        args: "--restart=always -p 8001:8001 -v /var/run/docker.sock:/var/run/docker.sock"
+    docker.run "rancher",
+        image: "rancher/server:latest",
+        args: "--restart=always -p 8000:8080"
 
   end
 
@@ -47,7 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 2000, host: 2000
 
   #For TaskBoard web
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 4000, host: 4000
 
   #For docker registry
   config.vm.network "forwarded_port", guest: 5050, host: 5050
@@ -56,7 +56,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 5050, host: 5050
 
   #For dockerboard
-  config.vm.network "forwarded_port", guest: 8001, host: 8001
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
 
   #For jenkins
   config.vm.network "forwarded_port", guest: 8080, host: 8080
