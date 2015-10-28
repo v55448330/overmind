@@ -50,7 +50,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 4000, host: 4000
 
   #For docker registry
-  config.vm.network "forwarded_port", guest: 5050, host: 5050
+  config.vm.network "forwarded_port", guest: 5000, host: 5000
 
   #For docker registry-ui
   config.vm.network "forwarded_port", guest: 5050, host: 5050
