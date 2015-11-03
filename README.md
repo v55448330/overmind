@@ -21,7 +21,7 @@ Quick Start
 2. Clone this repository and vagrant up
 	```
 	git clone https://github.com/wizardbyron/overmind.git
-	cd overmind/vagrant
+	cd overmind
 	vagrant up
 	```
 
