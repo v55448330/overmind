@@ -1,5 +1,4 @@
-Overmind
-===========
+# Overmind
 
 __Overmind__ is a integrated centralized continuous delivery server vagrant file which contains some essential common useful tools and services to help a scrum team start up quickly.
 
@@ -11,19 +10,18 @@ Images in Overmind:
 4. [Docker-registry](https://registry.hub.docker.com/_/registry/)
 5. [Docker-registry-ui](https://hub.docker.com/r/atcol/docker-registry-ui/)
 6. [Rancher](https://registry.hub.docker.com/u/dockerboard/dockerboard/)
+6. [cAdvisor](https://hub.docker.com/r/google/cadvisor-canary/)
 
-
-Quick Start
-----------
+## Quick Start
 
 1. Install [Vagrant](https://www.vagrantup.com/).
 
 2. Clone this repository and vagrant up
-	```
+```
 	git clone https://github.com/wizardbyron/overmind.git
 	cd overmind
 	vagrant up
-	```
+```
 
 3. Access service by : `http://<your-ip>:<port>`
 
@@ -35,10 +33,9 @@ Quick Start
 | Docker Registry UI | 5050 |
 | Rancher            | 8000 |
 | Jenkins            | 8080 |
+| cAdvisor           | 9000 |
 
-
-License
-----------
+## License
 
 copyright (c) 2015 All Overmind Contributors
 
