@@ -4,11 +4,10 @@ __Overmind__ is a integrated centralized continuous delivery server vagrant file
 
 Images in Overmind:
 
-1. [TaskBoard](https://registry.hub.docker.com/u/mirweb/taskboard/)
+1. [Wekan](https://hub.docker.com/r/mquandalle/wekan/)
 2. [Jenkins](https://registry.hub.docker.com/_/jenkins/)
 3. [Gogs](https://registry.hub.docker.com/u/codeskyblue/docker-gogs/)
 4. [Docker-registry](https://registry.hub.docker.com/_/registry/)
-5. [Docker-registry-ui](https://hub.docker.com/r/atcol/docker-registry-ui/)
 6. [Rancher](https://registry.hub.docker.com/u/dockerboard/dockerboard/)
 6. [cAdvisor](https://hub.docker.com/r/google/cadvisor-canary/)
 
@@ -27,13 +26,12 @@ Images in Overmind:
 
 | Service            | Port |
 | -------------------|------|
-| TaskBoard          | 2000 |
+| WeKan              | 2000 |
 | Gogs               | 3000 |
 | Docker Registry    | 5000 |
-| Docker Registry UI | 5050 |
-| Rancher            | 8000 |
 | Jenkins            | 8080 |
-| cAdvisor           | 9000 |
+| Rancher            | 9000 |
+| cAdvisor           | 9090 |
 
 ## License
 
