@@ -1,37 +1,18 @@
 # Overmind
 
-__Overmind__ is a integrated centralized continuous delivery server vagrant file which contains some essential common useful tools and services to help a scrum team start up quickly.
+__Overmind__ is a integrated centralized dockerize continuous delivery server which contains some useful tools and services to help your scrum team start up faster.
 
-Images in Overmind:
+Services in Overmind:
 
-1. [Wekan](https://hub.docker.com/r/mquandalle/wekan/)
-2. [Jenkins](https://registry.hub.docker.com/_/jenkins/)
-3. [Gogs](https://registry.hub.docker.com/u/codeskyblue/docker-gogs/)
-4. [Docker-registry](https://registry.hub.docker.com/_/registry/)
-6. [Rancher](https://registry.hub.docker.com/u/dockerboard/dockerboard/)
-6. [cAdvisor](https://hub.docker.com/r/google/cadvisor-canary/)
+| Service            | Port | Note |
+| -------------------|------|------|
+|[Wekan](https://hub.docker.com/r/mquandalle/wekan/)|2000||
+|[Gogs](https://registry.hub.docker.com/u/codeskyblue/docker-gogs/)|3000||
+|[Docker-registry](https://registry.hub.docker.com/_/registry/)|5000||
+|[Jenkins](https://registry.hub.docker.com/_/jenkins/)|8080||
+|[Rancher](https://registry.hub.docker.com/u/dockerboard/dockerboard/)|9000||
+|[cAdvisor](https://hub.docker.com/r/google/cadvisor-canary/)|9090||
 
-## Quick Start
-
-1. Install [Vagrant](https://www.vagrantup.com/).
-
-2. Clone this repository and vagrant up
-```
-	git clone https://github.com/wizardbyron/overmind.git
-	cd overmind
-	vagrant up
-```
-
-3. Access service by : `http://<your-ip>:<port>`
-
-| Service            | Port |
-| -------------------|------|
-| WeKan              | 2000 |
-| Gogs               | 3000 |
-| Docker Registry    | 5000 |
-| Jenkins            | 8080 |
-| Rancher            | 9000 |
-| cAdvisor           | 9090 |
 
 ## License
 
