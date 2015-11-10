@@ -42,7 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
-  config.vm.synced_folder "overmind", "/home/vagrant/overmind"
+  config.vm.synced_folder "./overmind", "/home/vagrant/overmind"
 
   #Provision
   config.vm.provision "shell", path: "provision/ubuntu-trusty64-provision.sh"
