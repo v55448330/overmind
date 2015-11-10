@@ -6,12 +6,12 @@ Services in Overmind:
 
 | Service            | Port | Note |
 | -------------------|------|------|
-|[Wekan](https://hub.docker.com/r/mquandalle/wekan/)|2000||
-|[Gogs](https://registry.hub.docker.com/u/codeskyblue/docker-gogs/)|3000||
-|[Docker-registry](https://registry.hub.docker.com/_/registry/)|5000||
-|[Jenkins](https://registry.hub.docker.com/_/jenkins/)|8080||
-|[Rancher](https://registry.hub.docker.com/u/dockerboard/dockerboard/)|9000||
-|[cAdvisor](https://hub.docker.com/r/google/cadvisor-canary/)|9090||
+|[Wekan](https://hub.docker.com/r/mquandalle/wekan/)|2000|An open-source kanban|
+|[Gogs](https://registry.hub.docker.com/u/codeskyblue/docker-gogs/)|3000|A painless self-hosted Git service.|
+|[Docker-registry](https://registry.hub.docker.com/_/registry/)|5000|Containerized docker registry|
+|[Jenkins](https://registry.hub.docker.com/_/jenkins/)|8080|Official Jenkins Docker image|
+|[Rancher](https://hub.docker.com/r/rancher/server/)|9000|Rancher Server Container|
+|[cAdvisor](https://hub.docker.com/r/google/cadvisor-canary/)|9090|Analyzes resource usage and performance characteristics of running containers.|
 
 
 ## License
