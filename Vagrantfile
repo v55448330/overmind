@@ -16,9 +16,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box_check_update = true
 
-  # Private Network setting.
-  # config.vm.network "private_network", ip: "192.168.1.100"
-
   #WeKan web
   config.vm.network "forwarded_port", guest: 2000, host: 2000
 
