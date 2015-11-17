@@ -19,7 +19,7 @@ gogs:
   ports:
     - 3000:3000
   volumes:
-    - /var/services/gogs:/data
+    - /var/overmind_data/gogs:/data:rw
 
 registry:
   restart: always
@@ -33,7 +33,7 @@ registry:
   #   REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
   #   REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
   volumes:
-    - /var/services/registry/data:/var/lib/registry
+    - /var/overmind_data/registry/data:/var/lib/registry:rw
     # - /var/registry/certs:/certs
     # - /var/registry/auth:/auth
 
@@ -45,7 +45,7 @@ jenkins:
     - 8080:8080
     - 50000:50000
   volumes:
-    - /var/services/jenkins_home:/var/jenkins_home:rw
+    - /var/overmind_data/jenkins_home:/var/jenkins_home:rw
 
 rancher-server:
   restart: always
