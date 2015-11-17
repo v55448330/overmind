@@ -40,12 +40,12 @@ registry:
 jenkins:
   restart: always
   image: jenkins
-#  user: root
+  user: root
   ports:
     - 8080:8080
     - 50000:50000
-#  volumes:
-#    - /var/services/jenkins_home/:/var/jenkins_home/:rw
+  volumes:
+    - /var/services/jenkins_home:/var/jenkins_home:rw
 
 rancher-server:
   restart: always
@@ -63,4 +63,4 @@ cadvisor:
     - /:/rootfs:ro
     - /var/run:/var/run:rw
     - /sys:/sys:ro
-    - /var/lib/docker/:/var/lib/docker:ro
+    - /var/lib/docker:/var/lib/docker:ro
