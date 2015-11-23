@@ -14,6 +14,18 @@ Services in Overmind:
 |[cAdvisor](https://hub.docker.com/r/google/cadvisor-canary/)|9090|Analyzes resource usage and performance characteristics of running containers.|
 
 
+# Notes:
+
+1. Services are accessed by `http://<your-ip>:<port>`
+
+2. All data were saved in host `/var/overmind_data`.
+
+3. Please ensure all docker images are completely pulled.
+
+4. Please ensure all required ports are accessible.
+
+5. You have to setup all services by yourself.
+
 ## License
 
 copyright (c) 2015 All Overmind Contributors
