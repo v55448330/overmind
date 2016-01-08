@@ -1,8 +1,22 @@
+nginx:
+  image: nginx
+  restart: always
+  ports:
+    - "8080:8080"
+  volumes:
+    - /vagrant/config/nginx.conf:/etc/nginx/nginx.conf
+  links:
+    - wekan
+    - gogs
+    - registry
+    - jenkins
+    - rancher-server
+
 wekan:
   restart: always
   image: mquandalle/wekan
-  ports:
-    - 2000:80
+  # ports:
+  #   - 2000:80
   environment:
     MONGO_URL: mongodb://db
     ROOT_URL: http://example.com
@@ -24,8 +38,8 @@ gogs:
 registry:
   restart: always
   image: registry:2
-  ports:
-    - 5000:5000
+  # ports:
+  #   - 5000:5000
   # environment:
   #   REGISTRY_HTTP_TLS_CERTIFICATE: /certs/domain.crt
   #   REGISTRY_HTTP_TLS_KEY: /certs/domain.key
@@ -42,17 +56,21 @@ jenkins:
   image: jenkins
   user: root
   ports:
-    - 8080:8080
+  #   - 8080:8080
     - 50000:50000
   volumes:
     - /var/overmind_data/jenkins_home:/var/jenkins_home:rw
+  links:
+    - registry
+    - gogs
+    - rancher-server
 
 rancher-server:
   restart: always
   image: rancher/server
-  ports:
-    - 9000:8080
-    - 3306:3306
+  # ports:
+    # - 9000:8080
+    # - 3306:3306
 
 cadvisor:
   restart: always
