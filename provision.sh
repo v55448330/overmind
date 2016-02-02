@@ -9,6 +9,5 @@ sudo sh -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /
 sudo apt-cache policy docker-engine
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y docker-engine python-pip
-sudo pip install docker-compose
+sudo apt-get install -y docker-engine
 sudo usermod -aG docker vagrant
