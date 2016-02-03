@@ -11,3 +11,5 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y docker-engine
 sudo usermod -aG docker vagrant
+sudo -u vagrant pip install docker-compose
+sudo docker-compose -f /vagrant/docker-compose.yml up -d
