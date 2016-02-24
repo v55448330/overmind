@@ -1,3 +1,16 @@
+nginx:
+  restart: always
+  image: nginx
+  links:
+    - wekan
+    - jenkins
+    - gogs
+    - registry
+    - rancher-server
+  volumes:
+    - /vagrant/config/nginx/nginx.conf:/etc/nginx/nginx.conf
+
+
 wekan:
   restart: always
   image: mquandalle/wekan
