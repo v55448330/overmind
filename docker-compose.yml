@@ -2,7 +2,7 @@ wekan:
   restart: always
   image: mquandalle/wekan
   ports:
-    - 2000:80
+    - 80:80
   environment:
     MONGO_URL: mongodb://db
     ROOT_URL: http://example.com
@@ -13,56 +13,12 @@ wekan-db:
   restart: always
   image: mongo
 
-gogs:
-  restart: always
-  image: gogs/gogs
-  ports:
-    - 3000:3000
-  volumes:
-    - /var/overmind_data/gogs:/data:rw
-
-registry:
-  restart: always
-  image: registry:2
-  ports:
-    - 5000:5000
-  # environment:
-  #   REGISTRY_HTTP_TLS_CERTIFICATE: /certs/domain.crt
-  #   REGISTRY_HTTP_TLS_KEY: /certs/domain.key
-  #   REGISTRY_AUTH: htpasswd
-  #   REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
-  #   REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
-  volumes:
-    - /var/overmind_data/registry/data:/var/lib/registry:rw
-    # - /var/registry/certs:/certs
-    # - /var/registry/auth:/auth
-
-jenkins:
-  restart: always
-  image: jenkins
-  user: root
-  ports:
-    - 8080:8080
-    - 50000:50000
-  volumes:
-    - /var/overmind_data/jenkins_home:/var/jenkins_home:rw
-  links:
-    - registry
-    - gogs
-    - rancher-server
-
-rancher-server:
-  restart: always
-  image: rancher/server
-  ports:
-    - 9000:8080
-    - 3306:3306
 
 cadvisor:
   restart: always
   image: google/cadvisor
   ports:
-    - 9090:8080
+    - 8080:8080
   volumes:
     - /:/rootfs:ro
     - /var/run:/var/run:rw
